@@ -12,39 +12,58 @@
       margin: 0;
       text-align: center;
     }
+
     header {
       padding: 2em 1em;
     }
+
     img.profile {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
     }
+
     h1 {
       font-size: 1.8em;
       margin: 0.5em 0 0;
     }
+
     h2 {
       font-size: 1.4em;
       font-weight: normal;
       color: #5a3520;
     }
+
+    h3 {
+      font-size: 1.4em;
+      margin-bottom: 1em;
+    }
+
     p {
       font-size: 1em;
       max-width: 500px;
       margin: 1em auto;
       line-height: 1.5em;
     }
-    section.social {
-      background-color: #d8a48f;
+
+    section {
+      width: 100%;
+      box-sizing: border-box;
       padding: 2em 1em;
       border-top: 2px solid #b47b63;
+      text-align: center;
+      margin: 0;
     }
-    h3 {
-      font-size: 1.4em;
-      margin-bottom: 1em;
+
+    section.social {
+      background-color: #d8a48f;
     }
+
+    section.guide {
+      background-color: #f7ebe4;
+    }
+
     .social-button {
       display: block;
       background-color: #a6593e;
@@ -57,8 +76,40 @@
       border-radius: 8px;
       transition: background 0.3s;
     }
+
     .social-button:hover {
       background-color: #874730;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      padding: 12px 22px;
+      background: linear-gradient(135deg, #a6593e, #8d4c36);
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 12px;
+      margin-top: 15px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 6px 20px rgba(166, 89, 62, 0.6);
+    }
+
+    .download-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(166, 89, 62, 0.6);
+    }
+
+    .download-btn .icon {
+      width: 22px;
+      height: 22px;
+      transition: transform 0.3s ease;
+    }
+
+    .download-btn:hover .icon {
+      transform: translateY(4px);
     }
   </style>
 </head>
@@ -66,11 +117,12 @@
   <header>
     <img src="images/sumik_toys_pp.jpg" alt="Your Photo" class="profile" />
     <h1>Handmade by Sumik Toys Finland</h1>
-    <h2>Welcome to Sumik Toys Finland! </h2>
+    <h2>Welcome to Sumik Toys Finland!</h2>
     <p>Elena ★ Stylish Handcrafted Crochet Toys
       ★ Crafted with yarn made of plush, wool, mohair, and cotton 🧶
       ★ Unique designs inspired by Finnish charm
-      ★ Worldwide shipping 🌏</p>
+      ★ Worldwide shipping 🌏
+    </p>
     <p>Perfect for gifts or your cozy collection! ❤️</p>
   </header>
 
@@ -81,6 +133,19 @@
     <a href="https://www.etsy.com/fi-en/shop/SumikToysFinland?ref=shop-header-name&listing_id=1760924750&from_page=listing#about" class="social-button">Etsy</a>
     <a href="https://pinterest.com/elenasummanen" class="social-button">Pinterest</a>
     <a href="https://www.facebook.com/people/Elena-Toys/100011410368258" class="social-button">Facebook</a>
+  </section>
+
+  <section class="guide">
+    <h3>Suomeksi: lataa minun ilmainen ohje</h3>
+    <a href="files/sorsa_guide.pdf" download="sorsa_guide.pdf" class="download-btn">
+      <span>Download</span>
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 19h14" 
+              stroke="currentColor" stroke-width="2" 
+              fill="none" stroke-linecap="round" 
+              stroke-linejoin="round"/>
+      </svg>
+    </a>
   </section>
 </body>
 </html>
